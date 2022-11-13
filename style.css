@@ -1,0 +1,265 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kulim Park', sans-serif;
+}
+header{
+    min-height: 10vh;
+    background-color: #222;
+    display: flex;
+    align-items: center;
+}
+nav{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+}
+.logo{
+   flex: 3 1 20rem;
+   font-family: 'Lobster', cursive;
+   font-size: 0.9rem;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    flex: 1 1 20rem;
+    align-items: center;
+    justify-content: space-around;
+}
+ul li{
+    position: relative;
+    cursor: pointer;
+}
+@media(max-width:440px){
+    nav{
+        flex-direction: column;
+    }
+    .logo{
+        flex: 1 1 2rem;
+    
+
+    }
+    ul{
+        flex: 1 1 2rem;
+    }
+    ul li{
+        margin: 1rem;
+    }
+}
+#spn{
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 3px;
+    background-color: #fff;
+    width: 0%;
+    transition: all .5s ease;
+ 
+}
+ul li:hover #spn{
+    width: 100%;
+   
+}
+.bg{
+    min-height: 90vh;
+    background-image: url('/playstation2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 3rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.bg p{
+    margin: 3rem;
+   font-size: clamp(0.5rem, 3.5vw,1.2rem)
+}
+.bg h1{
+    
+    font-size: clamp(2rem, 3.5vw, 7rem); 
+}
+.bg button{
+    padding: 1rem 4rem;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #fff;
+    font-weight: bold;
+    position: relative;
+  z-index: 2;
+  animation: buttonAnimation 2s infinite;
+}
+.bg button:hover{
+    color: #000;
+}
+.bg span{
+position: absolute;
+left: 0;
+top: 0;
+height: 100%;
+background-color: #fff;
+width: 0%;
+transition: all 0.5s ease;
+z-index: -2;
+}
+.bg button:hover span{
+    width: 100%;
+   
+
+}
+.hero{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    gap: 1rem;
+}
+.text{
+    display: flex;
+    flex: 1 1 40rem;
+    line-height: 50px;
+}
+
+.image{
+    display: flex;
+    flex: 1 1 40rem;
+}
+.image img{
+    height: 100%;
+    width: 100%;
+}
+@media(max-width:914px){
+    .hero{
+        flex-direction: column;
+    }
+    .image{
+        flex: 1 ;  
+        order: 1;
+    }
+    .text{
+        flex: 1 1 20rem;
+        order: 2;
+    }
+}
+section{
+    display: flex;
+    align-items: flex-start;
+    width: 90%;
+    margin: auto;
+    gap: 1rem;
+    justify-content: center;
+  
+}
+.kora1{
+    display: flex;
+    flex: 1 1 40rem;
+}
+.kora1 img{
+    width: 100%;
+    height: 100%;
+}
+.kora2{
+    display: flex;
+    flex: 1 1 40rem;
+    line-height: 50px;
+}
+@media(max-width:914px){
+    section{
+        flex-direction: column;
+    }
+    .kora2{
+        display: flex;
+        flex: 1 ;
+    }
+    .kora1{
+        display: flex;
+        flex: 1 ;
+    }
+}
+.categories{
+min-height: 100vh;
+width: 90%;
+margin: auto;
+
+}
+.categories h1{
+    margin: 3rem;
+}
+.play{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+}
+.player{
+    flex: 1 1 30rem;
+}
+.player img{
+    width: 100%;
+    height: 100%;
+}
+/* hard-part */
+
+.hard-part{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    gap: 2rem;
+    
+}
+.hard-part-text{
+   flex: 1;
+}
+.hard-part-text h1{
+   font-size: clamp(2rem, 3vw, 6rem);
+}
+.hard-part-text h2{
+    margin: 1.5rem 0rem;
+}
+.hard-part-image{
+    flex: 1;
+}
+.hard-part-image img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+}
+/* media query */
+@media(max-width:818px){
+    .hard-part{
+flex-direction: column;
+gap: 0;
+    }
+    .hard-part-image{
+        flex: 1 1 7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hard-part-text{
+        flex: 1 1 7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .hard-part-image img{
+    height: 70%;
+    width: 80%;
+    object-fit: cover;
+   
+        
+    }
+}
